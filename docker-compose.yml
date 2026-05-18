@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    container_name: deck-oracle
+    ports: 
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./:/usr/local/etc/php/php.ini
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: feijoad4
+      MYSQL_DATABASE: deck-oracle
+    ports:
+      - "3306:3306"
+    
+

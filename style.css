@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+
+/*Variáveis*/
+:root {
+    --cor1: #084F8C;
+    --cor2: #08798C;
+    --cor3: #098D74;
+    --cor4: #088C47;
+    --cor5: #088C1B;
+    --cinza: rgb(184, 184, 184);
+}
+
+/*Configurações do cabeçalho versão desktop*/
+header {
+    background-color: var(--cor1);
+    color: white;
+    min-height: 40px;
+    padding: 10px;
+    position: relative;
+}
+
+header h1, header nav, header li {
+    display: inline-block;
+}
+
+header nav {
+    position: absolute;
+    right: 20px;
+    top: 35%;
+}
+
+header h1 {
+    position: absolute;
+    left: 20px;
+    top: 20%;
+}
+
+header li {
+    margin-right: 10px;
+}
+
+/*Configurações da section com imagem de fundo*/
+main section#imagem {
+    background-image: url(imagens/frantic-search.jpg);
+    min-height: 300px;
+    width: 100%;
+    background-position: center center;
+    position: relative;
+}
+
+main section#imagem form {
+    width: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+
+main section#imagem input[type="text"]#pesquisa {
+    display: block;
+    width: 300px;
+    min-height: 10px;
+    border-radius: 5px;
+    border-color: var(--cinza);
+    border-style: solid;
+    padding: 10px;
+}
+
+input[type="submit"]#enviar, button {
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0;
+}
+
+main section#imagem input[type="submit"]#enviar, main section#imagem button {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+main section#imagem input[type="submit"]#enviar {
+    color: white;
+    background-color: var(--cor3);
+    margin-left: 0;
+    margin-right: 9px;
+}
+
+main section#imagem button {
+    margin-left: 9px;
+    margin-right: 0;
+}
+
+/*Configurações da parte principal para computador*/
+
+main section#decks {
+    margin: 10px;
+    border-radius: 10px;
+    border-color: var(--cinza);
+    border-width: 3px;
+    border-style: solid;
+    padding: 20px;
+}
+
+main section#decks div {
+    height: 500px;
+}
+
+/*Configurações em relação ao rodapé versão desktop*/
+footer {
+    background-color: var(--cor1);
+    height: 400px;
+    padding: 40px;
+}
+
+footer p {
+    color: white;
+    font-size: 0.8em;
+    text-align: center;
+    margin-bottom: 5px;
+}
