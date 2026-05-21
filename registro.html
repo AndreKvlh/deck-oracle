@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>DeckOracle | Registro</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.php">DeckOracle</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:modoEscuro()"><i data-lucide="moon" id="modo-escuro"></i></a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="registro" class="form-menor-centro">
+            <h1>Registro na Plataforma</h1>
+            <form action="registro.php" method="post" id="form_reg">
+                <label for="nome_usuario" class="campo">Nome de Usuário</label>
+                <input type="text" name="nome_usuario" id="nome_usuario" class="campo">
+                <label for="email" class="campo">E-mail</label>
+                <input type="email" name="email" id="email" class="campo">
+                <label for="senha" class="campo">Senha</label>
+                <input type="password" name="senha" id="senha" class="campo">
+                <label for="conf_senha" class="campo">Confirme sua senha</label>
+                <input type="password" name="conf_senha" id="conf_senha" class="campo">
+                <input type="checkbox" name="aceita_termos" id="aceita_termos">
+                <label for="aceita_termos">Eu concordo com os termos de uso e serviço do site.</label><br>
+                <input type="submit" id="enviar_reg" class="enviar" value="Registrar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados a Wizards of the Coast</p>
+        <p>Todas as opiniões expressas nos comentários não representam a equipe por trás do site DeckOracle</p>
+        <p>Todos os valores de cartas são baseados conforme LigaMagic</p>
+        <p>Copyright (c)2026 FeijoadaComCésio</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

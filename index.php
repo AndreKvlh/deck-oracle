@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Deck Oracle | Página Inicial</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>DeckOracle | Página Inicial</title>
 </head>
 <body>
     <header>
-        <h1>Deck Oracle</h1>
+        <h1><a href="index.php">DeckOracle</a></h1>
         <nav>
             <ul>
-                <li>Dark Mode</li>
-                <li>Registro</li>
-                <li>Login</li>
+                <li><a href="javascript:modoEscuro()"><i data-lucide="moon" id="modo-escuro"></i></a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -21,18 +22,198 @@
         <section id="imagem">
             <form action="pesquisa.php" method="get">
                 <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar decks, comandantes...">
-                <input type="submit" value="Pesquisar" id="enviar">
+                <input type="submit" value="Pesquisar" class="enviar">
                 <button type="button">Avançado</button>
             </form>
         </section>
         <section id="decks">
-            <div>
+            <div class="vitrine">
                 <h1>Decks em Destaque</h1>
-                <p>LISTA DE DECKS</p>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <a href="#">Ver mais...</a>
             </div>
-            <div>
+            <div class="vitrine">
                 <h1>Decks Recentes</h1>
-                <p>LISTA DE DECKS</p>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <div class="amostra-deck">
+                    <div class="imagem-amostra">
+                        <div class="simbolo-mana" id="w">w</div>
+                        <div class="simbolo-mana" id="u">u</div>
+                        <div class="simbolo-mana" id="b">b</div>
+                        <div class="simbolo-mana" id="r">r</div>
+                        <div class="simbolo-mana" id="g">g</div>
+                    </div>
+                    <div class="texto-amostra">
+                        <h2>Nome do Deck</h2>
+                        <h3>Formato</h3>
+                        <h4>Usuário</h4>
+                        <p>Avaliação e Comentários</p>
+                    </div>
+                </div>
+                <a href="#">Ver mais...</a>
             </div>
         </section>
     </main>
@@ -42,5 +223,6 @@
         <p>Todos os valores de cartas são baseados conforme LigaMagic</p>
         <p>Copyright (c)2026 FeijoadaComCésio</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
