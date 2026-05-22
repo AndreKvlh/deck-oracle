@@ -15,5 +15,11 @@ services:
       MYSQL_DATABASE: deck-oracle
     ports:
       - "3306:3306"
+    volumes:
+      - dados-bd:/var/lib/mysql
+      - ./db-init:/docker-entrypoint-initdb.d
+
+volumes:
+  dados-bd:
     
 

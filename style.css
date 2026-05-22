@@ -291,6 +291,12 @@ main section.form-menor-centro input[type="submit"].enviar{
     margin-bottom: 5px;
 }
 
+main section form span.aviso p {
+    font-size: 0.6em;
+    font-weight: bold;
+    color: red;
+}
+
 /*Configurações em relação ao rodapé versão desktop*/
 footer {
     background-color: var(--cor1);
