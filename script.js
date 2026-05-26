@@ -92,3 +92,10 @@ form_reg.addEventListener("submit", (e) => {
 
     document.getElementById("form_reg").submit();
 })
+
+//Função para habilitar ou desabilitar o dropdown
+function mostrarDropdown() {
+    const dropdown = document.getElementsByClassName("dropdown-menu")[0];
+    if(dropdown.style.visibility == "hidden") dropdown.style.visibility = "visible";
+    else dropdown.style.visibility = "hidden";
+}

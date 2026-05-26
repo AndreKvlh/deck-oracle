@@ -1,3 +1,11 @@
+<?php 
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+$usuario_logado = isset($_SESSION['logado']) && $_SESSION['logado'] == true;
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -13,8 +21,19 @@
         <nav>
             <ul>
                 <li><a href="javascript:modoEscuro()"><i data-lucide="moon" id="modo-escuro"></i></a></li>
-                <li><a href="registro.html">Registro</a></li>
-                <li><a href="login.html">Login</a></li>
+                <?php if($usuario_logado) : ?>
+                    <li><p>Olá, <strong><?= $_SESSION['usuario_nome'] ?></strong></p></li>
+                    <li><a href="javascript:mostrarDropdown();"><i data-lucide="circle-user" id="foto-mini"></i><i data-lucide="chevron-down"></i></a></li>
+                    <ul class="dropdown-menu">
+                        <li><i data-lucide="plus"></i>Novo Deck</li>
+                        <li><i data-lucide="user"></i>Meu Perfil</li>
+                        <li><i data-lucide="settings"></i>Configurações</li>
+                        <a href="logout.php"><li style="color:red;"><i data-lucide="log-out"></i>Logout</li></a>
+                    </ul>
+                <?php else : ?>
+                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="login.php">Login</a></li>
+                <?php endif ; ?>
             </ul>
         </nav>
     </header>

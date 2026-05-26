@@ -30,6 +30,7 @@ header {
     min-height: 40px;
     padding: 10px;
     position: relative;
+    overflow: visible;
 }
 
 header h1, header nav, header li {
@@ -63,6 +64,36 @@ header a:visited {
 header #modo-escuro {
     width: 18px;
     height: 18px;
+}
+
+header #foto-mini {
+    width: 25px;
+    height: 25px;
+}
+
+ul.dropdown-menu {
+    position: absolute;
+    right: 15px;
+    top: 39px;
+    display: block;
+    visibility: hidden;
+    z-index: 1;
+    background-color: rgb(216, 218, 223);
+}
+
+ul.dropdown-menu li {
+    display: block;
+    padding: 15px;
+    color: black;
+    margin-right: 0;
+}
+
+ul.dropdown-menu li:hover {
+    background-color: rgb(184, 185, 190);
+}
+
+ul.dropdown-menu li a, ul.dropdown-menu li a:visited {
+    color: red;
 }
 
 /*Configurações da section com imagem de fundo*/
@@ -253,11 +284,12 @@ main section.form-menor-centro {
 main section.form-menor-centro h1 {
     margin-bottom: 30px;
     color: var(--fonte);
+    text-align: center;
 }
 
 main section.form-menor-centro form {
     display: block;
-    margin-left: 12%;
+    margin-left: 18%;
 }
 
 main section.form-menor-centro label {

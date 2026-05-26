@@ -8,34 +8,34 @@
     <title>DeckOracle | Confirme Seu E-mail</title>
 </head>
 <body>
-    <?php 
-        $nome_usuario = $_POST['nome_usuario'];
-        $email = $_POST['email'];
-        $senha = $_POST['senha'];
+    <main>
+        <section class="form-menor-centro">
+           <?php 
+                $nome_usuario = $_POST['nome_usuario'];
+                $email = $_POST['email'];
+                $senha = $_POST['senha'];
 
-        //Criptografando a senha
-        $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
+                //Criptografando a senha
+                $senha_cripto = password_hash($senha, PASSWORD_DEFAULT);
 
-        //Cria o comando no SQL para ser executado
-        $sql_query = "INSERT INTO usuarios (nome_usuario, email, senha) VALUES (?, ?, ?)";
+                //Gera um token de confirmação
+                $token_confirmacao = bin2hex(random_bytes(32));
 
-        $stmt = $pdo->prepare($sql_query);
-        $stmt->execute([$nome_usuario, $email, $senha_cripto]);
-        
-        echo "<p>Deu certo!</p>"
-        //Vamos usar o STMT junto com o PDO para enviar a query para o
-        //BD
-        
+                //Cria o comando no SQL para ser executado
+                $sql_query = "INSERT INTO usuarios (nome_usuario, email, senha, token_confirmacao) VALUES (?, ?, ?, ?)";
 
-        /*
-        1 - Não salvou o cadastro no BD;
-        2 - Não criptografou a senha;
-        X 3 - Não salvou a sessão;
-        4 - Não enviou e-mail de confirmação;
-        5 - Vulnerável a XSS;
-        X 6 - Não verificou se as senhas batem umas com as outras;
-        X 7 - Não tá checando se a checkbox ela está de fato checada;
-        */
-    ?>
+                //Preparar a query para lançar no SQL
+                $stmt = $pdo->prepare($sql_query);
+                $stmt->execute([$nome_usuario, $email, $senha_cripto, $token_confirmacao]);
+
+                echo "<h1>Cadastro realizado com sucesso</h1>";
+                echo "<p>Token: $token_confirmacao</p>"
+            ?>
+            <p>Verifique a sua caixa de entrada e confirme seu cadastro no e-mail que enviamos para lá</p>
+            <p>Redirecionando para a home page em 5 segundos...</p>
+            <p><a href="index.php">Voltar para a página inicial</a></p>
+            <meta http-equiv="refresh" content="5;url=index.php">
+        </section>
+    </main>
 </body>
 </html>
