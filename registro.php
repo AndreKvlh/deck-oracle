@@ -1,4 +1,7 @@
-<?php require 'conexao.php'?>
+<?php 
+require 'conexao.php';
+require 'enviar-email.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,12 +32,12 @@
                 $stmt->execute([$nome_usuario, $email, $senha_cripto, $token_confirmacao]);
 
                 echo "<h1>Cadastro realizado com sucesso</h1>";
-                echo "<p>Token: $token_confirmacao</p>"
+                enviarEmail($email, $nome_usuario, 'email_conf', $token_confirmacao);
             ?>
             <p>Verifique a sua caixa de entrada e confirme seu cadastro no e-mail que enviamos para lá</p>
             <p>Redirecionando para a home page em 5 segundos...</p>
             <p><a href="index.php">Voltar para a página inicial</a></p>
-            <meta http-equiv="refresh" content="5;url=index.php">
+            <!--<meta http-equiv="refresh" content="5;url=index.php">-->
         </section>
     </main>
 </body>

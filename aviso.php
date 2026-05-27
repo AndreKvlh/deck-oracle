@@ -1,6 +1,4 @@
 <?php 
-    require 'conexao.php';
-
     //Cria uma nova sessão
     if(session_status() == PHP_SESSION_NONE) {
         session_start();
@@ -16,21 +14,6 @@
         header("Location: login.php");
         exit;
     }  
-
-    //Faz uma query para o BD a fim de obter a informação se o
-    //e-mail do usuário foi confirmado
-    $query = "SELECT email_confirmado FROM usuarios WHERE id = :id";
-
-    $stmt = $pdo->prepare($query);
-    $stmt->bindValue(':id', $_SESSION['usuario_id'], PDO::PARAM_INT);
-    $stmt->execute();
-
-    $email_confirmado = $stmt->fetch();
-
-    if($email_confirmado['email_confirmado'] == 0) {
-        header("Location: aviso.php");
-        exit;
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <title>Meu Perfil | Deck Oracle</title>
+    <title>Confirme o seu e-mail | DeckOracle</title>
 </head>
 <body>
     <header>
@@ -59,7 +42,13 @@
         </nav>
     </header>
     <main>
-
+        <section class="form-menor-centro">
+            <div id="aviso">
+                <h1>Confirme o seu e-mail</h1>
+                <p>Antes de poder prosseguir e usar os serviços da DeckOracle, você precisa <strong>confirmar o seu e-mail</strong></p>
+                <p>Cheque a sua caixa de entrada em busca do nosso e-mail a fim de confirmar e poder utilizar nossos serviços.</p>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Todos os direitos reservados a Wizards of the Coast</p>

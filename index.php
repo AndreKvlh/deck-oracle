@@ -26,7 +26,7 @@ $usuario_logado = isset($_SESSION['logado']) && $_SESSION['logado'] == true;
                     <li><a href="javascript:mostrarDropdown();"><i data-lucide="circle-user" id="foto-mini"></i><i data-lucide="chevron-down"></i></a></li>
                     <ul class="dropdown-menu">
                         <li><i data-lucide="plus"></i>Novo Deck</li>
-                        <li><i data-lucide="user"></i>Meu Perfil</li>
+                        <a href="perfil.php"><li><i data-lucide="user"></i>Meu Perfil</li></a>
                         <li><i data-lucide="settings"></i>Configurações</li>
                         <a href="logout.php"><li style="color:red;"><i data-lucide="log-out"></i>Logout</li></a>
                     </ul>

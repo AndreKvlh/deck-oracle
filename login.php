@@ -10,7 +10,7 @@ $aviso = "";
 
 if($login != "" && $senha != "") {
     //Vamos criar a query para obter as informações do usuário
-    $query = "SELECT nome_usuario, email, senha FROM usuarios WHERE (nome_usuario = ? OR email = ?) LIMIT 1";
+    $query = "SELECT id, nome_usuario, email, senha FROM usuarios WHERE (nome_usuario = ? OR email = ?) LIMIT 1";
 
     $stmt = $pdo->prepare($query);
     $stmt->execute([$login, $login]);

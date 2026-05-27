@@ -196,6 +196,18 @@ main div h1 {
     color: var(--fonte);
 }
 
+/*Configurações para a section do aviso*/
+div#aviso {
+    background-color: rgb(255, 85, 85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+div#aviso p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
 /*Configurações para div que irá mostrar o deck*/
 main div.amostra-deck {
     display: inline-block;
